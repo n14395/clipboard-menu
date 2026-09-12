@@ -144,7 +144,7 @@ class PreferencesService: ObservableObject {
     init(defaults: UserDefaults) {
         self.defaults = defaults
         // Load from UserDefaults with defaults
-        self.maxHistoryItems = defaults.object(forKey: Keys.maxHistoryItems) as? Int ?? 25
+        self.maxHistoryItems = defaults.object(forKey: Keys.maxHistoryItems) as? Int ?? 100
         self.maxStorageMB = defaults.object(forKey: Keys.maxStorageMB) as? Int ?? 10240 // 10GB default
         self.maxItemSizeMB = defaults.object(forKey: Keys.maxItemSizeMB) as? Int ?? 1024 // 1GB default
         self.launchAtLogin = defaults.object(forKey: Keys.launchAtLogin) as? Bool ?? false
@@ -168,7 +168,7 @@ class PreferencesService: ObservableObject {
            let mode = SnippetsMenuMode(rawValue: modeString) {
             self.snippetsMenuMode = mode
         } else {
-            self.snippetsMenuMode = .separate
+            self.snippetsMenuMode = .integrated
         }
         
         self.previewSize = defaults.object(forKey: Keys.previewSize) as? Int ?? 500
@@ -195,7 +195,7 @@ class PreferencesService: ObservableObject {
         launchAtLogin = false
         historyShortcutData = .defaultHistory
         snippetsShortcutData = .defaultSnippets
-        snippetsMenuMode = .separate
+        snippetsMenuMode = .integrated
         previewSize = 500
         globalShortcutsEnabled = false
         compactHistoryView = false

@@ -262,18 +262,46 @@ struct StoragePreferencesView: View {
     @State private var snippetsStorageSize: Int64 = 0
     @State private var historyItemCount: Int = 0
     @State private var historyStorageSize: Int64 = 0
-    
+    @State private var maxHistoryItemsText: String = ""
+    @FocusState private var maxHistoryItemsFieldFocused: Bool
+
     var body: some View {
         Form {
             Section {
-                Stepper(value: $preferencesService.maxHistoryItems, in: 5...100, step: 5) {
-                    HStack {
-                        Text("Max History Items")
-                        Spacer()
-                        Text("\(historyItemCount) used of \(preferencesService.maxHistoryItems)")
-                            .foregroundColor(.secondary)
-                            .monospacedDigit()
+                HStack {
+                    Text("Max History Items")
+                    Spacer()
+                    Text("\(historyItemCount) used of")
+                        .foregroundColor(.secondary)
+                        .monospacedDigit()
+                    TextField("", text: $maxHistoryItemsText)
+                        .textFieldStyle(.roundedBorder)
+                        .labelsHidden()
+                        .multilineTextAlignment(.trailing)
+                        .frame(width: 56)
+                        .focused($maxHistoryItemsFieldFocused)
+                        .onSubmit { commitMaxHistoryItemsText() }
+                    Stepper("", value: $preferencesService.maxHistoryItems, in: 5...1000, step: 5)
+                        .labelsHidden()
+                }
+                .onChange(of: maxHistoryItemsText) { _, newValue in
+                    let digits = String(newValue.filter { $0.isASCII && $0.isNumber })
+                    if digits != newValue {
+                        maxHistoryItemsText = digits
+                        return
                     }
+                    guard let value = Int(digits) else { return } // field empty while editing
+                    if value > 1000 {
+                        maxHistoryItemsText = "1000"
+                    } else if value >= 5 {
+                        preferencesService.maxHistoryItems = value
+                    }
+                }
+                .onChange(of: preferencesService.maxHistoryItems) { _, newValue in
+                    maxHistoryItemsText = String(newValue)
+                }
+                .onChange(of: maxHistoryItemsFieldFocused) { _, focused in
+                    if !focused { commitMaxHistoryItemsText() }
                 }
 
                 Stepper(value: $preferencesService.maxStorageMB, in: 100...51200, step: 100) {
@@ -354,6 +382,7 @@ struct StoragePreferencesView: View {
         .onAppear {
             refreshHistoryStats()
             refreshSnippetsStats()
+            maxHistoryItemsText = String(preferencesService.maxHistoryItems)
         }
         .onReceive(storageService.objectWillChange) { _ in
             // Refresh stats when storage changes (e.g., after cleanup)
@@ -380,6 +409,14 @@ struct StoragePreferencesView: View {
         }
     }
     
+    /// Commit the typed max-history value: clamp into 5...1000 and sync field + preference
+    private func commitMaxHistoryItemsText() {
+        let value = Int(maxHistoryItemsText) ?? preferencesService.maxHistoryItems
+        let clamped = min(max(value, 5), 1000)
+        preferencesService.maxHistoryItems = clamped
+        maxHistoryItemsText = String(clamped)
+    }
+
     /// Format MB value for display (shows GB if >= 1024 MB)
     private func formatMBValue(_ mb: Int) -> String {
         if mb >= 1024 {

@@ -1,111 +1,67 @@
-# ClipboardMenu
+<p align="center">
+  <img src="app-icon.png" width="128" alt="ClipboardMenu icon">
+</p>
 
-A powerful macOS menu bar clipboard manager with snippets, search, and iCloud sync.
+<h1 align="center">ClipboardMenu</h1>
+
+<p align="center">
+  A clipboard history app with wide support — copy and save anything from text to videos.<br>
+  Lightweight, native, and fully local. Lives in your Mac's menu bar.
+</p>
+
+<p align="center">
+  <a href="https://apps.apple.com/app/clipboardmenu/id6757977297">Mac App Store</a> ·
+  <a href="https://n14395.com/clipboardmenu">Website</a>
+</p>
+
+![Clipboard history menu showing text, links, files, images and videos](screenshots/1.png)
+
+## What it does
+
+ClipboardMenu monitors your clipboard in the background and automatically saves everything you copy. Click the menu bar icon — or press a global shortcut from any app — to search your full history and paste anything back with a single click. Star the items you reuse constantly and they become snippets that never expire.
 
 ## Features
 
-- **Clipboard History**: Automatically captures text, rich text, images, and videos
-- **Two Menu Bar Items**: Separate menus for history and saved snippets
-- **Thumbnails & Previews**: Images/videos shown as thumbnails, expand on hover
-- **Snippets with Variables**: Save frequently used text with dynamic variables:
-  - `{{date}}`, `{{time}}`, `{{datetime}}`
-  - `{{clipboard}}` - current clipboard content
-  - `{{cursor}}` - cursor position after paste
-  - `{{uuid}}`, `{{random}}`, `{{username}}`, `{{hostname}}`
-- **Regex Search**: Power-user friendly search with regex support
-- **iCloud Sync**: Snippets sync across your devices via iCloud
-- **User Configurable**: Set your own limits for history items and storage
+- **Clipboard history for everything** — plain text, rich text (RTF), images, videos, single files, folders, and multi-file "stacks", with the source app and timestamp recorded for each item
+- **Reusable snippets** — star any history item to keep it forever; snippets are exempt from cleanup, stored separately, and can be drag-reordered
+- **Instant search** — case-insensitive filtering as you type, with a regex mode for power users; press Enter to paste the first result
+- **Hover previews** — full-size image previews, auto-playing muted video loops, scrollable text/code previews, and file-stack listings in a floating window
+- **Global shortcuts** — ⌘⇧V for history and ⌘⇧S for snippets by default, fully configurable
+- **Smart deduplication** — copying something you've copied before moves the existing item to the top instead of creating a duplicate
+- **Compact mode** — a denser single-line layout that fits more items on screen
+- **Flexible storage** — configurable history size (10–1000 items), storage cap (100 MB–20 GB), and per-item size limit; large files are stored as references instead of copies
+
+| Hover previews | Snippets menu |
+|---|---|
+| ![Hover preview of an image item](screenshots/2.png) | ![Saved snippets menu](screenshots/6.png) |
+
+## Privacy
+
+Fully sandboxed with no network access — your clipboard never leaves your Mac.
+
+- All data lives locally in `~/Library/Application Support/ClipboardMenu/` (a SQLite database plus media and thumbnail folders)
+- No cloud sync, no uploads, no analytics, no telemetry
+- Accessibility permission is optional and only used for the global keyboard shortcuts
 
 ## Requirements
 
-- macOS 13.0 (Ventura) or later
-- Xcode 15.0 or later
-- Apple Developer account (for CloudKit/iCloud features)
+- macOS 14.6 (Sonoma) or later
+- Apple Silicon or Intel
 
-## Building
+## Building from source
 
-### Using Swift Package Manager
-
-```bash
-cd clipboard-menu
-swift build
-```
-
-### Using Xcode
-
-1. Open the project in Xcode:
-   ```bash
-   open Package.swift
-   ```
-
-2. Select the "ClipboardMenu" scheme
-
-3. Build and run (⌘R)
-
-### Creating a Release Build
+Requires a full Xcode install (not just the Command Line Tools — the SwiftUI macro plugins need Xcode's toolchain).
 
 ```bash
-swift build -c release
+./build.sh            # production build → build/ClipboardMenu.app
+./build.sh --dmg      # …plus a drag-to-install build/ClipboardMenu.dmg
+./build.sh --help     # signing, notarization and release flags
 ```
 
-The built executable will be at `.build/release/ClipboardMenu`
+Or open `ClipboardMenu.xcodeproj` in Xcode and run the `ClipboardMenu` scheme.
 
-## Project Structure
+Built with Swift 6, SwiftUI + AppKit, [GRDB.swift](https://github.com/groue/GRDB.swift) for SQLite, and AVFoundation for video handling.
 
-```
-ClipboardMenu/
-├── ClipboardMenuApp.swift          # App entry point
-├── Models/
-│   ├── ClipboardItem.swift         # Clipboard history item model
-│   ├── Snippet.swift               # Saved snippet model
-│   └── ContentType.swift           # Content type enum
-├── Services/
-│   ├── ClipboardMonitor.swift      # Monitors clipboard for changes
-│   ├── StorageService.swift        # SQLite + file storage
-│   ├── ThumbnailService.swift      # Image/video thumbnail generation
-│   ├── SearchService.swift         # Text and regex search
-│   ├── VariableService.swift       # Snippet variable expansion
-│   ├── CloudKitService.swift       # iCloud sync for snippets
-│   └── PreferencesService.swift    # User preferences
-├── Views/
-│   ├── MenuBarController.swift     # Menu bar item management
-│   ├── HistoryMenuView.swift       # Clipboard history menu
-│   ├── SnippetsMenuView.swift      # Snippets menu
-│   ├── ClipboardItemView.swift     # Individual item row
-│   ├── MediaPreviewPopover.swift   # Hover preview for media
-│   └── PreferencesView.swift       # Settings window
-└── Resources/
-    └── Assets.xcassets             # App icons (add your own)
-```
+---
 
-## Configuration
-
-### iCloud Setup
-
-To enable iCloud sync:
-
-1. Sign in to your Apple Developer account
-2. Create a CloudKit container with identifier `iCloud.com.clipboardmenu.app`
-3. Enable CloudKit capability in Xcode
-4. Update the entitlements file if using a different container ID
-
-### Keyboard Shortcuts
-
-Default shortcuts (customizable in preferences):
-- `⌘⇧V` - Open clipboard history
-- `⌘⇧S` - Open snippets
-
-## Storage
-
-Data is stored in:
-- `~/Library/Application Support/ClipboardMenu/clipboard.db` - SQLite database
-- `~/Library/Application Support/ClipboardMenu/Media/` - Original media files
-- `~/Library/Application Support/ClipboardMenu/Thumbnails/` - Generated thumbnails
-
-## Dependencies
-
-- [GRDB.swift](https://github.com/groue/GRDB.swift) - SQLite database wrapper
-
-## License
-
-MIT License
+*ClipboardMenu — your clipboard, organized.*
