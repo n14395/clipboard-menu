@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000001000000000000001 /* ClipboardMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000001 /* ClipboardMenuApp.swift */; };
+		A1000002000000000000001 /* ClipboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002000000000000001 /* ClipboardItem.swift */; };
+		A1000003000000000000001 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003000000000000001 /* Snippet.swift */; };
+		A1000004000000000000001 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000004000000000000001 /* ContentType.swift */; };
+		A1000005000000000000001 /* ClipboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000005000000000000001 /* ClipboardMonitor.swift */; };
+		A1000006000000000000001 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000006000000000000001 /* StorageService.swift */; };
+		A1000007000000000000001 /* ThumbnailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000007000000000000001 /* ThumbnailService.swift */; };
+		A1000008000000000000001 /* PreferencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000008000000000000001 /* PreferencesService.swift */; };
+		A1000009000000000000001 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000009000000000000001 /* SearchService.swift */; };
+		A100000A000000000000001 /* FilePermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000A000000000000001 /* FilePermissionService.swift */; };
+		A100000C000000000000001 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000C000000000000001 /* MenuBarController.swift */; };
+		A100000D000000000000001 /* HistoryMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000D000000000000001 /* HistoryMenuView.swift */; };
+		A100000E000000000000001 /* SnippetsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000E000000000000001 /* SnippetsMenuView.swift */; };
+		A100000F000000000000001 /* ClipboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000F000000000000001 /* ClipboardItemView.swift */; };
+		A1000010000000000000001 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010000000000000001 /* PreferencesView.swift */; };
+		A1000011000000000000001 /* MediaPreviewPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000011000000000000001 /* MediaPreviewPopover.swift */; };
+		A1000012000000000000001 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = A3000001000000000000001 /* GRDB */; };
+		A1000013000000000000001 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000015000000000000001 /* OnboardingView.swift */; };
+		A1000014000000000000001 /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000016000000000000001 /* KeyboardShortcut.swift */; };
+		A1000015000000000000001 /* HotkeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000017000000000000001 /* HotkeyService.swift */; };
+		A1000016000000000000001 /* ShortcutRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000018000000000000001 /* ShortcutRecorderView.swift */; };
+		A1000017000000000000001 /* AccessibilityPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000019000000000000001 /* AccessibilityPermissionView.swift */; };
+		A1000018000000000000001 /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200001A000000000000001 /* SizeCalculator.swift */; };
+		A1000019000000000000001 /* BookmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200001B000000000000001 /* BookmarkService.swift */; };
+		A100001A000000000000001 /* CloudDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200001C000000000000001 /* CloudDownloadService.swift */; };
+		DBBD71782F1CF0E0005CFA11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD71772F1CF0E0005CFA11 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2000001000000000000001 /* ClipboardMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuApp.swift; sourceTree = "<group>"; };
+		A2000002000000000000001 /* ClipboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItem.swift; sourceTree = "<group>"; };
+		A2000003000000000000001 /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
+		A2000004000000000000001 /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		A2000005000000000000001 /* ClipboardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMonitor.swift; sourceTree = "<group>"; };
+		A2000006000000000000001 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		A2000007000000000000001 /* ThumbnailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailService.swift; sourceTree = "<group>"; };
+		A2000008000000000000001 /* PreferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesService.swift; sourceTree = "<group>"; };
+		A2000009000000000000001 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		A200000A000000000000001 /* FilePermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePermissionService.swift; sourceTree = "<group>"; };
+		A200000C000000000000001 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		A200000D000000000000001 /* HistoryMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMenuView.swift; sourceTree = "<group>"; };
+		A200000E000000000000001 /* SnippetsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetsMenuView.swift; sourceTree = "<group>"; };
+		A200000F000000000000001 /* ClipboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItemView.swift; sourceTree = "<group>"; };
+		A2000010000000000000001 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		A2000011000000000000001 /* MediaPreviewPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPreviewPopover.swift; sourceTree = "<group>"; };
+		A2000012000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000013000000000000001 /* ClipboardMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardMenu.entitlements; sourceTree = "<group>"; };
+		A2000014000000000000001 /* ClipboardMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000015000000000000001 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A2000016000000000000001 /* KeyboardShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcut.swift; sourceTree = "<group>"; };
+		A2000017000000000000001 /* HotkeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyService.swift; sourceTree = "<group>"; };
+		A2000018000000000000001 /* ShortcutRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutRecorderView.swift; sourceTree = "<group>"; };
+		A2000019000000000000001 /* AccessibilityPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityPermissionView.swift; sourceTree = "<group>"; };
+		A200001A000000000000001 /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
+		A200001B000000000000001 /* BookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkService.swift; sourceTree = "<group>"; };
+		A200001C000000000000001 /* CloudDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDownloadService.swift; sourceTree = "<group>"; };
+		DBBD71772F1CF0E0005CFA11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4000001000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000012000000000000001 /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5000001000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A5000002000000000000001 /* ClipboardMenu */,
+				A5000006000000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5000002000000000000001 /* ClipboardMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000001 /* ClipboardMenuApp.swift */,
+				A5000003000000000000001 /* Models */,
+				A5000004000000000000001 /* Services */,
+				A5000005000000000000001 /* Views */,
+				A5000007000000000000001 /* Resources */,
+				A2000012000000000000001 /* Info.plist */,
+				A2000013000000000000001 /* ClipboardMenu.entitlements */,
+				DBBD71772F1CF0E0005CFA11 /* Assets.xcassets */,
+			);
+			path = ClipboardMenu;
+			sourceTree = "<group>";
+		};
+		A5000003000000000000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2000002000000000000001 /* ClipboardItem.swift */,
+				A2000003000000000000001 /* Snippet.swift */,
+				A2000004000000000000001 /* ContentType.swift */,
+				A2000016000000000000001 /* KeyboardShortcut.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5000004000000000000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A200001B000000000000001 /* BookmarkService.swift */,
+				A2000005000000000000001 /* ClipboardMonitor.swift */,
+				A200001C000000000000001 /* CloudDownloadService.swift */,
+				A200000A000000000000001 /* FilePermissionService.swift */,
+				A2000017000000000000001 /* HotkeyService.swift */,
+				A2000008000000000000001 /* PreferencesService.swift */,
+				A2000009000000000000001 /* SearchService.swift */,
+				A200001A000000000000001 /* SizeCalculator.swift */,
+				A2000006000000000000001 /* StorageService.swift */,
+				A2000007000000000000001 /* ThumbnailService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A5000005000000000000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2000019000000000000001 /* AccessibilityPermissionView.swift */,
+				A200000F000000000000001 /* ClipboardItemView.swift */,
+				A200000D000000000000001 /* HistoryMenuView.swift */,
+				A2000011000000000000001 /* MediaPreviewPopover.swift */,
+				A200000C000000000000001 /* MenuBarController.swift */,
+				A2000015000000000000001 /* OnboardingView.swift */,
+				A2000010000000000000001 /* PreferencesView.swift */,
+				A2000018000000000000001 /* ShortcutRecorderView.swift */,
+				A200000E000000000000001 /* SnippetsMenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5000006000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2000014000000000000001 /* ClipboardMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5000007000000000000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6000001000000000000001 /* ClipboardMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7000003000000000000001 /* Build configuration list for PBXNativeTarget "ClipboardMenu" */;
+			buildPhases = (
+				A4000002000000000000001 /* Sources */,
+				A4000001000000000000001 /* Frameworks */,
+				A4000003000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClipboardMenu;
+			packageProductDependencies = (
+				A3000001000000000000001 /* GRDB */,
+			);
+			productName = ClipboardMenu;
+			productReference = A2000014000000000000001 /* ClipboardMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8000001000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					A6000001000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A7000001000000000000001 /* Build configuration list for PBXProject "ClipboardMenu" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5000001000000000000001;
+			packageReferences = (
+				A3000002000000000000001 /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
+			productRefGroup = A5000006000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6000001000000000000001 /* ClipboardMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4000003000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBD71782F1CF0E0005CFA11 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4000002000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001000000000000001 /* ClipboardMenuApp.swift in Sources */,
+				A1000002000000000000001 /* ClipboardItem.swift in Sources */,
+				A1000003000000000000001 /* Snippet.swift in Sources */,
+				A1000004000000000000001 /* ContentType.swift in Sources */,
+				A1000014000000000000001 /* KeyboardShortcut.swift in Sources */,
+				A1000005000000000000001 /* ClipboardMonitor.swift in Sources */,
+				A1000006000000000000001 /* StorageService.swift in Sources */,
+				A1000007000000000000001 /* ThumbnailService.swift in Sources */,
+				A1000008000000000000001 /* PreferencesService.swift in Sources */,
+				A1000009000000000000001 /* SearchService.swift in Sources */,
+				A100000A000000000000001 /* FilePermissionService.swift in Sources */,
+				A1000015000000000000001 /* HotkeyService.swift in Sources */,
+				A100000C000000000000001 /* MenuBarController.swift in Sources */,
+				A100000D000000000000001 /* HistoryMenuView.swift in Sources */,
+				A100000E000000000000001 /* SnippetsMenuView.swift in Sources */,
+				A100000F000000000000001 /* ClipboardItemView.swift in Sources */,
+				A1000010000000000000001 /* PreferencesView.swift in Sources */,
+				A1000011000000000000001 /* MediaPreviewPopover.swift in Sources */,
+				A1000013000000000000001 /* OnboardingView.swift in Sources */,
+				A1000016000000000000001 /* ShortcutRecorderView.swift in Sources */,
+				A1000017000000000000001 /* AccessibilityPermissionView.swift in Sources */,
+				A1000018000000000000001 /* SizeCalculator.swift in Sources */,
+				A1000019000000000000001 /* BookmarkService.swift in Sources */,
+				A100001A000000000000001 /* CloudDownloadService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9000001000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P52946XHRJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A9000002000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P52946XHRJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A9000003000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClipboardMenu/ClipboardMenu.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClipboardMenu/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Clipboard Menu";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright 2024. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.n14395.clipboardMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A9000004000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClipboardMenu/ClipboardMenu.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClipboardMenu/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Clipboard Menu";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright 2024. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.n14395.clipboardMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7000001000000000000001 /* Build configuration list for PBXProject "ClipboardMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9000001000000000000001 /* Debug */,
+				A9000002000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7000003000000000000001 /* Build configuration list for PBXNativeTarget "ClipboardMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9000003000000000000001 /* Debug */,
+				A9000004000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3000002000000000000001 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3000001000000000000001 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3000002000000000000001 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A8000001000000000000001 /* Project object */;
+}
