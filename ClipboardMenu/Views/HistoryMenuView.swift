@@ -1080,6 +1080,9 @@ struct HistoryMenuView: View {
                             NSWorkspace.shared.open(url)
                         }
                     }
+                    #if SPARKLE
+                    SparkleCheckForUpdatesButton()
+                    #endif
                     Divider()
                     Button("Quit") {
                         NSApplication.shared.terminate(nil)

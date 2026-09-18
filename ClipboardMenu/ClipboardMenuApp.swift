@@ -35,6 +35,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Hide dock icon - menu bar only app
         NSApp.setActivationPolicy(.accessory)
+        #if SPARKLE
+        SparkleUpdater.start()
+        #endif
 
         // Prevent macOS from auto-terminating or suddenly killing the app while idle
         ProcessInfo.processInfo.disableAutomaticTermination("Clipboard monitoring must remain active")
