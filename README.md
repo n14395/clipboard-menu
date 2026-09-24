@@ -65,3 +65,8 @@ Built with Swift 6, SwiftUI + AppKit, [GRDB.swift](https://github.com/groue/GRDB
 ---
 
 *ClipboardMenu — your clipboard, organized.*
+
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE).
+Third-party attribution is in [NOTICE](NOTICE).
