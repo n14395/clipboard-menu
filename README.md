@@ -48,6 +48,15 @@ Fully sandboxed with no network access — your clipboard never leaves your Mac.
 - macOS 14.6 (Sonoma) or later
 - Apple Silicon or Intel
 
+## Install
+
+```sh
+brew tap n14395/tap
+brew install --cask clipboard-menu
+```
+
+Or download the `.dmg` from [Releases](../../releases) and drag ClipboardMenu to Applications.
+
 ## Building from source
 
 Requires a full Xcode install (not just the Command Line Tools — the SwiftUI macro plugins need Xcode's toolchain).
