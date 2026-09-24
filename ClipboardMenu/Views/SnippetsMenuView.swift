@@ -94,10 +94,6 @@ struct SnippetsMenuView: View {
                 
                 // More options menu
                 Menu {
-                    #if SPARKLE
-                    SparkleCheckForUpdatesButton()
-                    Divider()
-                    #endif
                     Button("Quit") {
                         NSApplication.shared.terminate(nil)
                     }

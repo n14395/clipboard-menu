@@ -59,6 +59,12 @@ struct GeneralPreferencesView: View {
                     showResetConfirmation = true
                 }
             }
+
+            #if SPARKLE
+            Section {
+                SparkleCheckForUpdatesButton()
+            }
+            #endif
         }
         .formStyle(.grouped)
         .padding()
